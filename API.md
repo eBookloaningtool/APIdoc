@@ -45,18 +45,22 @@ POST /api/auth/login
 }
 ```
 
-1.3 注销登录
-
+### **1.3 注销登录**
+```http
 POST /api/auth/logout
-
-请求头：
-
+```
+**请求头**
+```
 Authorization: Bearer <token>
-
-响应示例：
+```
+**响应**
+```json
 {
   "message": "注销成功"
 }
+```
+
+
 
 
 
@@ -100,15 +104,12 @@ GET /api/books
 ```
 
 
-2.2 获取电子书详情
-接口描述： 获取单本电子书的详细信息。
-
+### **2.2 获取电子书详情**
 ```http
 GET /api/books/{bookId}
 ```
-响应
+**响应**
 ```json
-
 {
   "bookId": "book123",
   "title": "JavaScript Basics",
@@ -122,11 +123,16 @@ GET /api/books/{bookId}
   "totalCopies": 10,
   "price": 5.99
 }
+```
 
-2.3 搜索电子书
-接口描述： 根据关键词搜索电子书。
+---
+
+### **2.3 搜索电子书**
+```http
 GET /api/books/search?q=javascript
-响应示例：
+```
+**响应**
+```json
 {
   "code": 200,
   "data": [
@@ -137,12 +143,16 @@ GET /api/books/search?q=javascript
     }
   ]
 }
+```
 
+---
 
-2.4 添加新书（管理员）
-接口描述： 管理员添加新电子书。
+### **2.4 添加新书（管理员）**
+```http
 POST /admin/books
-请求体示例：
+```
+**请求体**
+```json
 {
   "title": "New Book",
   "author": "Jane Doe",
@@ -155,7 +165,9 @@ POST /admin/books
   "description": "A thrilling sci-fi adventure.",
   "price": 7.99
 }
-响应示例：
+```
+**响应**
+```json
 {
   "message": "电子书添加成功",
   "data": {
@@ -163,8 +175,8 @@ POST /admin/books
     "title": "New Book"
   }
 }
-
 ```
+
 
 ---
 
@@ -270,22 +282,30 @@ POST /api/payments/purchase
 ---
 
 ## **🛠️ 8. 管理员功能**
+
 ### **8.1 删除书籍**
 ```http
 DELETE /api/books/{bookId}
 ```
 
+---
 
-8.2 类别管理（增删改查）
-接口描述： 管理员对电子书分类进行管理。
-•	添加分类
-•	POST /admin/categories
-请求体示例：
+### **8.2 类别管理（增删改查）**
+接口描述：管理员对电子书分类进行管理。
+
+**添加分类**
+```http
+POST /admin/categories
+```
+**请求体**
+```json
 {
   "name": "Programming",
   "description": "Books about programming"
 }
-响应示例：
+```
+**响应**
+```json
 {
   "message": "分类操作成功",
   "data": {
@@ -293,24 +313,36 @@ DELETE /api/books/{bookId}
     "name": "Programming"
   }
 }
-•	获取分类列表
-•	GET /admin/categories
-•	更新分类
-•	PUT /admin/categories/{categoryId}
-•	删除分类
-•	DELETE /admin/categories/{categoryId}
+```
 
+**获取分类列表**
+```http
+GET /admin/categories
+```
 
-8.3管理员获取用户列表
+**更新分类**
+```http
+PUT /admin/categories/{categoryId}
+```
 
+**删除分类**
+```http
+DELETE /admin/categories/{categoryId}
+```
+
+---
+
+### **8.3 管理员获取用户列表**
+```http
 GET /admin/users
+```
+**请求参数**  
+- `page`  
+- `size`  
+- `search`
 
-请求参数：
-
-•	page
-•	size
-•	search
-响应示例：
+**响应**
+```json
 {
   "code": 200,
   "data": [
@@ -329,8 +361,8 @@ GET /admin/users
   ],
   "total": 50
 }
+```
 
----
 
 ## **📊 9. 数据分析**
 ### **9.1 获取热门书籍**
