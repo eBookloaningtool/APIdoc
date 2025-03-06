@@ -1,7 +1,7 @@
 # 电子书借阅系统 API 文档
 
 ## **概述**
-**Base URL**: `https://api.ebook-library.com`
+**Base URL**: ``
 
 ---
 
