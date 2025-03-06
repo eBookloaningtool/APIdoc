@@ -45,7 +45,22 @@ POST /api/auth/login
 }
 ```
 
-### **1.3 获取用户信息**
+1.3 注销登录
+
+POST /api/auth/logout
+
+请求头：
+
+Authorization: Bearer <token>
+
+响应示例：
+{
+  "message": "注销成功"
+}
+
+
+
+### **1.4 获取用户信息**
 ```http
 GET /api/users/{userId}
 ```
@@ -84,21 +99,71 @@ GET /api/books
 ]
 ```
 
-### **2.2 添加新书（管理员）**
+
+2.2 获取电子书详情
+接口描述： 获取单本电子书的详细信息。
+
 ```http
-POST /api/books
+GET /api/books/{bookId}
 ```
-**请求体**
+响应
 ```json
+
+{
+  "bookId": "book123",
+  "title": "JavaScript Basics",
+  "author": "John Doe",
+  "publisher": "Example Publisher",
+  "isbn": "978-1234567890",
+  "description": "A beginner's guide to JavaScript.",
+  "coverUrl": "https://example.com/book-cover.jpg",
+  "category": "Programming",
+  "availableCopies": 5,
+  "totalCopies": 10,
+  "price": 5.99
+}
+
+2.3 搜索电子书
+接口描述： 根据关键词搜索电子书。
+GET /api/books/search?q=javascript
+响应示例：
+{
+  "code": 200,
+  "data": [
+    {
+      "bookId": "book123",
+      "title": "JavaScript Basics",
+      "author": "John Doe"
+    }
+  ]
+}
+
+
+2.4 添加新书（管理员）
+接口描述： 管理员添加新电子书。
+POST /admin/books
+请求体示例：
 {
   "title": "New Book",
   "author": "Jane Doe",
+  "publisher": "Example Publisher",
+  "isbn": "978-0987654321",
   "category": "Science Fiction",
   "availableCopies": 10,
+  "totalCopies": 10,
   "coverUrl": "https://example.com/new-book.jpg",
   "description": "A thrilling sci-fi adventure.",
   "price": 7.99
 }
+响应示例：
+{
+  "message": "电子书添加成功",
+  "data": {
+    "bookId": "book999",
+    "title": "New Book"
+  }
+}
+
 ```
 
 ---
@@ -209,6 +274,61 @@ POST /api/payments/purchase
 ```http
 DELETE /api/books/{bookId}
 ```
+
+
+8.2 类别管理（增删改查）
+接口描述： 管理员对电子书分类进行管理。
+•	添加分类
+•	POST /admin/categories
+请求体示例：
+{
+  "name": "Programming",
+  "description": "Books about programming"
+}
+响应示例：
+{
+  "message": "分类操作成功",
+  "data": {
+    "categoryId": "cat7001",
+    "name": "Programming"
+  }
+}
+•	获取分类列表
+•	GET /admin/categories
+•	更新分类
+•	PUT /admin/categories/{categoryId}
+•	删除分类
+•	DELETE /admin/categories/{categoryId}
+
+
+8.3管理员获取用户列表
+
+GET /admin/users
+
+请求参数：
+
+•	page
+•	size
+•	search
+响应示例：
+{
+  "code": 200,
+  "data": [
+    {
+      "userId": "12345",
+      "username": "user123",
+      "email": "user@example.com",
+      "role": "user"
+    },
+    {
+      "userId": "67890",
+      "username": "admin",
+      "email": "admin@example.com",
+      "role": "admin"
+    }
+  ],
+  "total": 50
+}
 
 ---
 
