@@ -30,6 +30,12 @@
 
 如果您的团队有其他扩展，请在开始实施之前与 Dan 或 John 确认这些扩展是否合适。
 
+---
+# Authentication
+- **JWT Bearer Token** is used for authenticated endpoints.
+- Obtain a token via `/api/auth/login`.
+---
+
 ## [认证 & 用户管理](Users.md)
 ## [电子书管理](eBooks.md)
 ## [借阅系统](Borrow.md)

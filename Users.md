@@ -1,75 +1,143 @@
 # 认证 & 用户管理
 
-## 1.1 用户注册
+## 用户管理
+
+### 用户注册
+
 ```http
-POST /api/auth/register
-```
-**请求体**
-```json
-{
-  "username": "user123",
-  "email": "user@example.com",
-  "password": "securepassword"
-}
-```
-**响应**
-```json
-{
-  "message": "User registered successfully",
-  "UUID": "3a0e3d23-5061-4602-a814-2bbc4447347e"
-}
+POST /api/users/register
 ```
 
-## **1.2 用户登录**
-```http
-POST /api/auth/login
-```
-**请求体**
+#### 请求体
+
 ```json
 {
   "email": "user@example.com",
-  "password": "securepassword"
+  "password": "securepassword",
+  "name": "John Doe"
 }
 ```
-**响应**
+
+#### 响应
+
 ```json
 {
-  "token": "jwt_token_here",
-  "UUID": "3a0e3d23-5061-4602-a814-2bbc4447347e"
+  "state": "success",
+  "UUID": "3a0e3d23-5061-4602-a814-2bbc4447347e",
+  "email": "user@example.com",
+  "name": "John Doe"
 }
 ```
 
-## **1.3 注销登录**
+### 用户信息更新
+
 ```http
-POST /api/auth/logout
+POST /api/users/update
 ```
-**请求头**
+
+#### 请求头
+
+```http
+Authorization: Bearer <JWT_TOKEN>
 ```
-Authorization: Bearer <token>
-```
-**响应**
+
+#### 请求体
+
 ```json
 {
-  "message": "success"
+  "email": "new@example.com",
+  "password": "NewPassword123",
+  "name": "Updated Name"
 }
 ```
 
+#### 响应
 
-
-
-
-## **1.4 获取用户信息**
-```http
-GET /api/users/{userId}
+```json
+{
+  "state": "success",
+  "UUID": "3a0e3d23-5061-4602-a814-2bbc4447347e",
+  "email": "new@example.com",
+  "name": "Updated Name"
+}
 ```
-**响应**
+
+### 获取用户信息
+
+```http
+POST /api/users/info
+```
+
+#### 请求头
+
+```http
+Authorization: Bearer <JWT_TOKEN>
+```
+
+#### 请求体
+
+```json
+{
+}
+```
+
+#### 响应
+
 ```json
 {
   "UUID": "3a0e3d23-5061-4602-a814-2bbc4447347e",
-  "username": "user123",
+  "name": "John Doe",
   "email": "user@example.com",
   "borrowedBooks": ["bookId1", "bookId2"],
   "wishlist": ["bookId3"],
   "transactionHistory": ["order123"]
+}
+```
+
+## 登录管理
+
+### 登录
+
+```http
+POST /api/auth/login
+```
+
+#### 请求体
+
+```json
+{
+  "email": "user@example.com",
+  "password": "securepassword"
+}
+```
+
+#### 响应
+
+```json
+{
+  "state": "success",
+  "token": "jwt_token_here",
+  "expiresIn": 3600,
+  "UUID": "3a0e3d23-5061-4602-a814-2bbc4447347e"
+}
+```
+
+### 注销
+
+```http
+POST /api/auth/logout
+```
+
+#### 请求头
+
+```http
+Authorization: Bearer <JWT_TOKEN>
+```
+
+#### 响应
+
+```json
+{
+  "state": "success"
 }
 ```
