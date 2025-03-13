@@ -1,29 +1,53 @@
+# 借阅系统
+
 ### **3.1 借阅电子书**
 ```http
 POST /api/borrow
 ```
-**请求体**
+
+#### 请求头
+
+```http
+Authorization: Bearer <JWT_TOKEN>
+```
+
+#### 请求体
 ```json
 {
-  "userId": "12345",
   "bookId": "book123"
 }
 ```
-**响应**
+#### 响应
 ```json
 {
-  "message": "Book borrowed successfully",
+  "state": "success",
   "dueDate": "2025-03-20"
 }
 ```
 
-### **3.2 取消借阅**
+### 取消借阅
 ```http
-DELETE /api/borrow/{bookId}
+POST /api/return/
 ```
-**响应**
+
+#### 请求头
+
+```http
+Authorization: Bearer <JWT_TOKEN>
+```
+
+#### 请求体
+
 ```json
 {
-  "message": "Book returned successfully"
+  "bookId": "book123"
+}
+```
+
+#### 响应
+
+```json
+{
+  "state": "success"
 }
 ```

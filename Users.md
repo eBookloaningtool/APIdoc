@@ -90,6 +90,7 @@ Authorization: Bearer <JWT_TOKEN>
   "email": "user@example.com",
   "balance": 0,
   "borrowedBooks": ["bookId1", "bookId2"],
+  "historicalBooks": ["bookId3", "bookId4"],
   "wishlist": ["bookId3"],
   "star": ["bookId1"],
   "transactionHistory": ["order123"]

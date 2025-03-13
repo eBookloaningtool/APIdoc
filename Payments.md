@@ -1,4 +1,6 @@
-### **7.1 购买电子书**
+# 支付系统
+
+### 充值余额
 ```http
 POST /api/payments/purchase
 ```

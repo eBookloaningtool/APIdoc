@@ -21,7 +21,9 @@
 - 系统应跟踪用户借阅的所有电子书。
 - 应用程序应包括每本电子书的封面图片及其类别（如科幻、悬疑、非小说等）和简要描述。
 
-可能的扩展 您可能想考虑一些扩展，例如：
+## 可能的扩展
+
+您可能想考虑一些扩展，例如：
 
 - 为用户借阅电子书提供支付机制。您可以使用虚拟支付商系统 [HorsePay](http://homepages.cs.ncl.ac.uk/daniel.nesbitt/CSC8019/HorsePay)，该系统模拟用户使用其卡支付。
 - 包括书籍类别的标签云等可视化。
@@ -41,7 +43,6 @@
 ## [借阅系统](Borrow.md)
 ## [愿望清单](Wishlist.md)
 ## [评论系统](Reviews.md)
-## [邮件通知](Notifications.md)
 ## [支付系统](Payments.md)
 ## [数据分析](Analytics.md)
 ## [书目分享](Share.md)

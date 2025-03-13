@@ -1,26 +1,21 @@
+# 电子书管理
 
-### **2.1 获取所有书籍**
+
+### 获取书籍榜单
 ```http
-GET /api/books
+GET /api/books/popular?category={category}
 ```
 **响应**
 ```json
 [
   {
-    "bookId": "book123",
-    "title": "JavaScript Basics",
-    "author": "John Doe",
-    "category": "Programming",
-    "availableCopies": 5,
-    "coverUrl": "https://example.com/book-cover.jpg",
-    "description": "A beginner's guide to JavaScript.",
-    "price": 5.99
+    "bookId": ["bookId1", "bookId2"]
   }
 ]
 ```
 
 
-### **2.2 获取电子书详情**
+### 获取电子书详情
 ```http
 GET /api/books/{bookId}
 ```
@@ -43,7 +38,7 @@ GET /api/books/{bookId}
 
 ---
 
-### **2.3 搜索电子书**
+### 搜索电子书
 ```http
 GET /api/books/search?q=javascript
 ```
