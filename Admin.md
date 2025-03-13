@@ -81,3 +81,33 @@ GET /admin/users
 }
 ```
 
+
+### **2.4 添加新书（管理员）**
+```http
+POST /admin/books
+```
+**请求体**
+```json
+{
+  "title": "New Book",
+  "author": "Jane Doe",
+  "publisher": "Example Publisher",
+  "isbn": "978-0987654321",
+  "category": "Science Fiction",
+  "availableCopies": 10,
+  "totalCopies": 10,
+  "coverUrl": "https://example.com/new-book.jpg",
+  "description": "A thrilling sci-fi adventure.",
+  "price": 7.99
+}
+```
+**响应**
+```json
+{
+  "message": "电子书添加成功",
+  "data": {
+    "bookId": "book999",
+    "title": "New Book"
+  }
+}
+```

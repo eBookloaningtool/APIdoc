@@ -88,9 +88,38 @@ Authorization: Bearer <JWT_TOKEN>
   "UUID": "3a0e3d23-5061-4602-a814-2bbc4447347e",
   "name": "John Doe",
   "email": "user@example.com",
+  "balance": 0,
   "borrowedBooks": ["bookId1", "bookId2"],
   "wishlist": ["bookId3"],
+  "star": ["bookId1"],
   "transactionHistory": ["order123"]
+}
+```
+
+### 删除账号
+
+```http
+POST /api/users/delete
+```
+
+#### 请求头
+
+```http
+Authorization: Bearer <JWT_TOKEN>
+```
+
+#### 请求体
+
+```json
+{
+}
+```
+
+#### 响应
+
+```json
+{
+  "state": "success"
 }
 ```
 
@@ -132,6 +161,28 @@ POST /api/auth/logout
 
 ```http
 Authorization: Bearer <JWT_TOKEN>
+```
+
+#### 响应
+
+```json
+{
+  "state": "success"
+}
+```
+
+### 忘记密码
+
+```http
+POST /api/auth/forget
+```
+
+#### 请求体
+
+```json
+{
+  "email": "user@example.com"
+}
 ```
 
 #### 响应
