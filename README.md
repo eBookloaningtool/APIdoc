@@ -44,7 +44,6 @@
 ## [愿望清单](Wishlist.md)
 ## [评论系统](Reviews.md)
 ## [支付系统](Payments.md)
-## [数据分析](Analytics.md)
 ## [书目分享](Share.md)
 ## [书目推荐](Recommendations.md)
 ## [管理员](Admin.md)
