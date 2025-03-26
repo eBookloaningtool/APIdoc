@@ -33,6 +33,8 @@
 如果您的团队有其他扩展，请在开始实施之前与 Dan 或 John 确认这些扩展是否合适。
 
 ---
+POST 方法传入参数使用 **JSON** 格式
+---
 # Authentication
 - **JWT Bearer Token** is used for authenticated endpoints.
 - Obtain a token via `/api/auth/login`.
