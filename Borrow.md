@@ -64,7 +64,6 @@ Authorization: Bearer <JWT_TOKEN>
 ```
 
 #### 请求体
-
 ```json
 {
   "bookId": "book123"
@@ -73,8 +72,18 @@ Authorization: Bearer <JWT_TOKEN>
 
 #### 响应
 
+- **续订成功：**
+
 ```json
 {
-  "state": "success"
+  "state": "success",
+  "newDueDate": "2025-04-03"
 }
 ```
+
+- **续订失败（例如续订次数超限或图书被预订）：**
+
+```json
+{
+  "state": "reach limit"
+}
