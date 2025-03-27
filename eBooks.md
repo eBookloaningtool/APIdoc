@@ -7,11 +7,9 @@ GET /api/books/popular?category={category}
 ```
 **响应**
 ```json
-[
-  {
+{
     "bookId": ["bookId1", "bookId2"]
-  }
-]
+}
 ```
 
 

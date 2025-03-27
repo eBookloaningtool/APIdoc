@@ -93,6 +93,7 @@ Authorization: Bearer <JWT_TOKEN>
   "historicalBooks": ["bookId3", "bookId4"],
   "wishlist": ["bookId3"],
   "star": ["bookId1"],
+  "shoppingcart": ["bookId5"],
   "transactionHistory": ["order123"]
 }
 ```
@@ -107,13 +108,6 @@ POST /api/users/delete
 
 ```http
 Authorization: Bearer <JWT_TOKEN>
-```
-
-#### 请求体
-
-```json
-{
-}
 ```
 
 #### 响应

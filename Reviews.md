@@ -40,12 +40,6 @@ POST /api/users/reviews
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-#### 请求体
-```json
-{
-}
-```
-
 #### 响应
 
 ```json

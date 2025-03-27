@@ -43,7 +43,7 @@ POST 方法传入参数使用 **JSON** 格式
 ## [认证 & 用户管理](Users.md)
 ## [电子书管理](eBooks.md)
 ## [借阅系统](Borrow.md)
-## [愿望清单](Wishlist.md)
+## [愿望清单和购物车](Wishlist.md)
 ## [评论系统](Reviews.md)
 ## [支付系统](Payments.md)
 ## [管理员](Admin.md)
