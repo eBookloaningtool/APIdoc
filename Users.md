@@ -25,7 +25,8 @@ POST /api/users/register
   "state": "success",
   "UUID": "3a0e3d23-5061-4602-a814-2bbc4447347e",
   "email": "user@example.com",
-  "name": "John Doe"
+  "name": "John Doe",
+  "createdat": "2025-03-28"
 }
 ```
 
@@ -74,13 +75,6 @@ POST /api/users/info
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-#### 请求体
-
-```json
-{
-}
-```
-
 #### 响应
 
 ```json
@@ -89,6 +83,7 @@ Authorization: Bearer <JWT_TOKEN>
   "name": "John Doe",
   "email": "user@example.com",
   "balance": 0,
+  "createdat": "2025-03-28",
   "borrowedBooks": ["bookId1", "bookId2"],
   "historicalBooks": ["bookId3", "bookId4"],
   "wishlist": ["bookId3"],
