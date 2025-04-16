@@ -28,7 +28,7 @@ Authorization: Bearer <JWT_TOKEN>
 ### 查看购物车
 
 ```http
-GET /api/cart/get
+POST /api/cart/get
 ```
 
 #### 请求头
