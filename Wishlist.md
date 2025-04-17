@@ -27,7 +27,7 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-### 取消愿望清单
+### 从愿望清单中删除
 
 ```http
 POST /api/wishlist/delete
@@ -42,7 +42,7 @@ Authorization: Bearer <JWT_TOKEN>
 #### 请求体
 ```json
 {
-  "bookId": "book123"
+  "bookId": ["bookId1", "bookId2"]
 }
 ```
 
