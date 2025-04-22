@@ -102,3 +102,61 @@ Authorization: Bearer <JWT_TOKEN>
   "newPayment": 2.5
 }
 ```
+
+### 获取最近阅读列表
+```http
+POST /api/borrow/borrowlist/
+```
+
+#### 请求头
+
+```http
+Authorization: Bearer <JWT_TOKEN>
+```
+
+#### 响应
+
+```json
+{
+  "state": "success",
+  "data": [
+    {
+      "borrowId": "borrowuuid1",
+      "bookId": "bookId1",
+      "borrowDate": "2025-01-01",
+      "dueDate": "2025-02-01"
+    }
+  ]
+}
+```
+
+### 获取借阅历史记录
+```http
+POST /api/borrow/history/
+```
+
+#### 请求头
+
+```http
+Authorization: Bearer <JWT_TOKEN>
+```
+
+#### 响应
+
+```json
+{
+  "state": "success",
+  "data": [
+        {
+          "borrowId": "borrowuuid1",
+          "bookId": "bookId1",
+          "borrowDate": "2025-01-01",
+          "dueDate": "2025-02-01",
+          "returnDate": "2025-02-01",
+          "status": "returned"
+        }
+    ]
+}
+```
+
+
