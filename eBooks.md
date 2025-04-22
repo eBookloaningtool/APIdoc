@@ -15,7 +15,7 @@ GET /api/books/popular
 
 ### 获取电子书详情
 ```http
-GET /api/books/{bookId}
+GET /api/books/get?bookId=book123
 ```
 **响应**
 ```json
