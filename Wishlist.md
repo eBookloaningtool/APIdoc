@@ -42,7 +42,7 @@ Authorization: Bearer <JWT_TOKEN>
 #### 请求体
 ```json
 {
-  "bookId": ["bookId1", "bookId2"]
+  "bookId": "bookId1"
 }
 ```
 

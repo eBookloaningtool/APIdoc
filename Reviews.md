@@ -31,7 +31,7 @@ Authorization: Bearer <JWT_TOKEN>
 
 ### 获取用户评论
 ```http
-POST /api/users/reviews
+POST /api/reviews/user
 ```
 
 #### 请求头
@@ -50,7 +50,7 @@ Authorization: Bearer <JWT_TOKEN>
 
 ### 获取书籍评论
 ```http
-GET /api/books/{bookId}/reviews
+GET /api/reviews/book?bookId=bookId1
 ```
 
 #### 响应
@@ -61,9 +61,24 @@ GET /api/books/{bookId}/reviews
 }
 ```
 
+### 获取评论内容
+```http
+GET /api/reviews/content?commentID=3fc5393d-9fcd-42b0-9801-bd2532bca309
+```
+
+#### 响应
+
+```json
+{
+  "UUID": "3a0e3d23-5061-4602-a814-2bbc4447347e",
+  "rating": 5,
+  "comment": "This book was amazing!"
+}
+```
+
 ### 删除评论
 ```http
-POST /api/books/delreviews
+POST /api/reviews/delete
 ```
 
 #### 请求头

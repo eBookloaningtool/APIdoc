@@ -1,6 +1,6 @@
 # 借阅系统
 
-### **3.1 借阅电子书**
+### 借阅电子书
 ```http
 POST /api/borrow/borrow
 ```
@@ -18,10 +18,23 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 #### 响应
+
+- **购买成功：**
+
 ```json
 {
   "state": "success",
-  "dueDate": "2025-03-20"
+  "dueDate": "2025-03-20",
+  "balance": 50.00
+}
+```
+
+- **余额不足：**
+
+```json
+{
+  "state": "insufficient balance",
+  "newPayment": 2.5
 }
 ```
 
@@ -81,9 +94,11 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-- **续订失败（例如续订次数超限或图书被预订）：**
+- **余额不足：**
 
 ```json
 {
-  "state": "reach limit"
+  "state": "insufficient balance",
+  "newPayment": 2.5
 }
+```
