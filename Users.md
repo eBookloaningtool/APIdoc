@@ -83,13 +83,7 @@ Authorization: Bearer <JWT_TOKEN>
   "name": "John Doe",
   "email": "user@example.com",
   "balance": 0,
-  "createdat": "2025-03-28",
-  "borrowedBooks": ["bookId1", "bookId2"],
-  "historicalBooks": ["bookId3", "bookId4"],
-  "wishlist": ["bookId3"],
-  "star": ["bookId1"],
-  "shoppingcart": ["bookId5"],
-  "transactionHistory": ["order123"]
+  "createdat": "2025-03-28"
 }
 ```
 

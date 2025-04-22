@@ -24,6 +24,6 @@ Authorization: Bearer <JWT_TOKEN>
 ```json
 {
   "state": "success",
-  "balance": 100
+  "balance": 200
 }
 ```
