@@ -2,7 +2,7 @@
 
 ### 添加评论
 ```http
-POST /api/books/addreviews
+POST /api/reviews/add
 ```
 
 #### 请求头
@@ -98,6 +98,6 @@ Authorization: Bearer <JWT_TOKEN>
 
 ```json
 {
-  "state": "success",
+  "state": "success"
 }
 ```
