@@ -14,7 +14,7 @@ Authorization: Bearer <JWT_TOKEN>
 #### 请求体
 ```json
 {
-  "bookId": ["bookId1","bookId2"]
+  "bookId": ["bookId1","bookId2","bookId3","bookId4","bookId5","bookId6"]
 }
 ```
 #### 响应
@@ -51,8 +51,8 @@ Authorization: Bearer <JWT_TOKEN>
 {
   "state": "Borrow failed.",
   "InvalidBookIds": ["bookId1","bookId2"],
-  "LowStockBookIds": ["bookId1","bookId2"],
-  "BorrowedBookIds": ["bookId1","bookId2"]
+  "LowStockBookIds": ["bookId3","bookId4"],
+  "BorrowedBookIds": ["bookId5","bookId6"]
 }
 ```
 
