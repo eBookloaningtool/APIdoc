@@ -14,7 +14,7 @@ Authorization: Bearer <JWT_TOKEN>
 #### 请求体
 ```json
 {
-  "bookId": "book123"
+  "bookId": ["bookId1","bookId2"]
 }
 ```
 #### 响应
@@ -35,6 +35,24 @@ Authorization: Bearer <JWT_TOKEN>
 {
   "state": "insufficient balance",
   "newPayment": 2.5
+}
+```
+- **达到借阅上限：**
+
+```json
+{
+  "state": "Reach borrow limit"
+}
+```
+
+- **部分书失效/库存不足/已借阅：**
+
+```json
+{
+  "state": "Borrow failed.",
+  "InvalidBookIds": ["bookId1","bookId2"],
+  "LowStockBookIds": ["bookId1","bookId2"],
+  "BorrowedBookIds": ["bookId1","bookId2"]
 }
 ```
 
