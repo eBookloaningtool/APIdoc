@@ -71,6 +71,7 @@ GET /api/reviews/content?commentId=3fc5393d-9fcd-42b0-9801-bd2532bca309
 ```json
 {
   "state": "success",
+  "bookId": "00b599d9-9ff1-4513-ac8f-5d1abaf093a0",
   "uuid": "3a0e3d23-5061-4602-a814-2bbc4447347e",
   "username": "name",
   "rating": 5,
