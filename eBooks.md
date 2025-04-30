@@ -1,13 +1,14 @@
 # 电子书管理
 
 
-### 获取书籍榜单
+### 获取书籍榜单（bookId按借阅次数降序排列）
 ```http
 GET /api/books/popular
 ```
 **响应**
 ```json
 {
+    "state": "success",
     "bookId": ["bookId1", "bookId2", "bookId3", "bookId4", "bookId5"]
 }
 ```
