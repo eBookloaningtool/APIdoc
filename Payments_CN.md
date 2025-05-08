@@ -1,25 +1,25 @@
-# Payment System
+# 支付系统
 
-### Top Up Balance
+### 充值余额
 
 ```http
 POST /api/payments/topup
 ```
 
-#### Request Headers
+#### 请求头
 
 ```http
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-#### Request Body
+#### 请求体
 ```json
 {
   "amount": 100
 }
 ```
 
-#### Response
+#### 响应
 
 ```json
 {
@@ -29,19 +29,19 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-### Payment History
+### 充值历史记录
 
 ```http
 POST /api/payments/history
 ```
 
-#### Request Headers
+#### 请求头
 
 ```http
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-#### Response
+#### 响应
 
 ```json
 {

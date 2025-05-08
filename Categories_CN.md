@@ -1,12 +1,12 @@
-# Category Management
+# 分类管理
 
-### Get All Categories
+### 获取所有分类
 
 ```http
 GET /api/categories/getAll
 ```
 
-#### Response
+#### 响应
 
 ```json
 {

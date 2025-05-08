@@ -1,43 +1,43 @@
-# Shopping Cart
+# 购物车
 
-### Add Book to Cart
+### 添加书籍到购物车
 
 ```http
 POST /api/cart/add
 ```
 
-#### Request Headers
+#### 请求头
 ```http
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-#### Request Body
+#### 请求体
 ```json
 {
   "bookId": "book123"
 }
 ```
 
-#### Response
+#### 响应
 ```json
 {
   "state": "success"
 }
 ```
 
-### View Cart
+### 查看购物车
 
 ```http
 POST /api/cart/get
 ```
 
-#### Request Headers
+#### 请求头
 
 ```http
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-#### Response
+#### 响应
 
 ```json
 {
@@ -45,25 +45,25 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-### Remove Books from Cart
+### 从购物车中移除书籍
 
 ```http
 POST /api/cart/remove
 ```
 
-#### Request Headers
+#### 请求头
 ```http
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-#### Request Body
+#### 请求体
 ```json
 {
   "bookId": ["bookId1", "bookId2"]
 }
 ```
 
-#### Response
+#### 响应
 ```json
 {
   "state": "success"

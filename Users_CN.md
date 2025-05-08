@@ -1,14 +1,14 @@
-# Authentication & User Management
+# 认证 & 用户管理
 
-## User Management
+## 用户管理
 
-### User Registration
+### 用户注册
 
 ```http
 POST /api/users/register
 ```
 
-#### Request Body
+#### 请求体
 
 ```json
 {
@@ -18,7 +18,7 @@ POST /api/users/register
 }
 ```
 
-#### Response
+#### 响应
 
 ```json
 {
@@ -30,19 +30,19 @@ POST /api/users/register
 }
 ```
 
-### Update User Information
+### 用户信息更新
 
 ```http
 POST /api/users/update
 ```
 
-#### Request Headers
+#### 请求头
 
 ```http
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-#### Request Body
+#### 请求体
 
 ```json
 {
@@ -52,7 +52,7 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-#### Response
+#### 响应
 
 ```json
 {
@@ -63,19 +63,19 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-### Get User Information
+### 获取用户信息
 
 ```http
 POST /api/users/info
 ```
 
-#### Request Headers
+#### 请求头
 
 ```http
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-#### Response
+#### 响应
 
 ```json
 {
@@ -87,19 +87,19 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-### Delete Account
+### 删除账号
 
 ```http
 POST /api/users/delete
 ```
 
-#### Request Headers
+#### 请求头
 
 ```http
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-#### Response
+#### 响应
 
 ```json
 {
@@ -107,15 +107,15 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-## Login Management
+## 登录管理
 
-### Login
+### 登录
 
 ```http
 POST /api/auth/login
 ```
 
-#### Request Body
+#### 请求体
 
 ```json
 {
@@ -124,7 +124,7 @@ POST /api/auth/login
 }
 ```
 
-#### Response
+#### 响应
 
 ```json
 {
@@ -135,19 +135,19 @@ POST /api/auth/login
 }
 ```
 
-### Logout
+### 注销
 
 ```http
 POST /api/auth/logout
 ```
 
-#### Request Headers
+#### 请求头
 
 ```http
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-#### Response
+#### 响应
 
 ```json
 {
@@ -155,13 +155,13 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-### Forgot Password
+### 忘记密码
 
 ```http
 POST /api/auth/forget
 ```
 
-#### Request Body
+#### 请求体
 
 ```json
 {
@@ -169,7 +169,7 @@ POST /api/auth/forget
 }
 ```
 
-#### Response
+#### 响应
 
 ```json
 {
