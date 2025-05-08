@@ -1,25 +1,25 @@
-# Wishlist and Shopping Cart
+# 愿望清单和购物车
 
-### Add to Wishlist
+### 添加到愿望清单
 
 ```http
 POST /api/wishlist/add
 ```
 
-#### Request Headers
+#### 请求头
 
 ```http
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-#### Request Body
+#### 请求体
 ```json
 {
   "bookId": "book123"
 }
 ```
 
-#### Response
+#### 响应
 
 ```json
 {
@@ -27,26 +27,26 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-### Remove from Wishlist
+### 从愿望清单中删除
 
 ```http
 POST /api/wishlist/delete
 ```
 
-#### Request Headers
+#### 请求头
 
 ```http
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-#### Request Body
+#### 请求体
 ```json
 {
   "bookId": "bookId1"
 }
 ```
 
-#### Response
+#### 响应
 
 ```json
 {
@@ -54,18 +54,18 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-### Get Wishlist
+### 获取愿望清单
 ```http
 POST /api/wishlist/get
 ```
 
-#### Request Headers
+#### 请求头
 
 ```http
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-#### Response
+#### 响应
 
 ```json
 {

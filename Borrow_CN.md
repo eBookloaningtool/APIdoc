@@ -1,25 +1,25 @@
-# Borrowing System
+# 借阅系统
 
-### Borrow E-Books
+### 借阅电子书
 ```http
 POST /api/borrow/borrow
 ```
 
-#### Request Headers
+#### 请求头
 
 ```http
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-#### Request Body
+#### 请求体
 ```json
 {
   "bookId": ["bookId1","bookId2","bookId3","bookId4","bookId5","bookId6"]
 }
 ```
-#### Response
+#### 响应
 
-- **Purchase Successful:**
+- **购买成功：**
 
 ```json
 {
@@ -29,7 +29,7 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-- **Insufficient Balance:**
+- **余额不足：**
 
 ```json
 {
@@ -37,7 +37,7 @@ Authorization: Bearer <JWT_TOKEN>
   "newPayment": 2.5
 }
 ```
-- **Reached Borrowing Limit:**
+- **达到借阅上限：**
 
 ```json
 {
@@ -45,7 +45,7 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-- **Some Books Invalid/Out of Stock/Already Borrowed:**
+- **部分书失效/库存不足/已借阅：**
 
 ```json
 {
@@ -56,18 +56,18 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-### Return E-Book
+### 取消借阅
 ```http
 POST /api/borrow/return/
 ```
 
-#### Request Headers
+#### 请求头
 
 ```http
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-#### Request Body
+#### 请求体
 
 ```json
 {
@@ -75,7 +75,7 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-#### Response
+#### 响应
 
 ```json
 {
@@ -83,27 +83,27 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-### Renew E-Book
+### 续借
 ```http
 POST /api/borrow/renew/
 ```
 
-#### Request Headers
+#### 请求头
 
 ```http
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-#### Request Body
+#### 请求体
 ```json
 {
   "bookId": "book123"
 }
 ```
 
-#### Response
+#### 响应
 
-- **Renewal Successful:**
+- **续订成功：**
 
 ```json
 {
@@ -112,7 +112,7 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-- **Insufficient Balance:**
+- **余额不足：**
 
 ```json
 {
@@ -121,18 +121,18 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-### Get Recent Reading List
+### 获取最近阅读列表
 ```http
 POST /api/borrow/borrowlist/
 ```
 
-#### Request Headers
+#### 请求头
 
 ```http
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-#### Response
+#### 响应
 
 ```json
 {
@@ -148,18 +148,18 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-### Get Borrowing History
+### 获取借阅历史记录
 ```http
 POST /api/borrow/history/
 ```
 
-#### Request Headers
+#### 请求头
 
 ```http
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-#### Response
+#### 响应
 
 ```json
 {

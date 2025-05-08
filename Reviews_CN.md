@@ -1,17 +1,17 @@
-# Review System
+# 评论系统
 
-### Add Review
+### 添加评论
 ```http
 POST /api/reviews/add
 ```
 
-#### Request Headers
+#### 请求头
 
 ```http
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-#### Request Body
+#### 请求体
 ```json
 {
   "bookId": "book123",
@@ -20,7 +20,7 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-#### Response
+#### 响应
 
 ```json
 {
@@ -29,18 +29,18 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-### Get User Reviews
+### 获取用户评论
 ```http
 POST /api/reviews/user
 ```
 
-#### Request Headers
+#### 请求头
 
 ```http
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-#### Response
+#### 响应
 
 ```json
 {
@@ -48,12 +48,12 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-### Get Book Reviews
+### 获取书籍评论
 ```http
 GET /api/reviews/book?bookId=bookId1
 ```
 
-#### Response
+#### 响应
 
 ```json
 {
@@ -61,12 +61,12 @@ GET /api/reviews/book?bookId=bookId1
 }
 ```
 
-### Get Review Content (username will be "Inactive user" if the user account is deleted)
+### 获取评论内容(用户注销则username为 Inactive user)
 ```http
 GET /api/reviews/content?commentId=3fc5393d-9fcd-42b0-9801-bd2532bca309
 ```
 
-#### Response
+#### 响应
 
 ```json
 {
@@ -80,25 +80,25 @@ GET /api/reviews/content?commentId=3fc5393d-9fcd-42b0-9801-bd2532bca309
 }
 ```
 
-### Delete Review
+### 删除评论
 ```http
 POST /api/reviews/delete
 ```
 
-#### Request Headers
+#### 请求头
 
 ```http
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-#### Request Body
+#### 请求体
 ```json
 {
   "commentId": "3fc5393d-9fcd-42b0-9801-bd2532bca309"
 }
 ```
 
-#### Response
+#### 响应
 
 ```json
 {

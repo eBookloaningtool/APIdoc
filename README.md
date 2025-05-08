@@ -1,50 +1,58 @@
-# 电子书借阅系统
-
-您的团队被要求开发一个应用程序，以允许人们从集中数据库中借阅电子书。该应用程序可以是一个网站，也可以是一个实际的移动或桌面应用程序。
-
-基本要求 实现的系统应具有以下功能：
-
-- 为用户创建和管理帐户的功能。
-- 每本电子书只能借给 x 个人，借阅时间为 y。
-  - 由您的团队创建带有作者、标题、数量 x 和借阅时间 y 的虚拟电子书。
-- 每个帐户一次最多可以借阅 10 本书。
-- 创建帐户仪表板，以便用户可以创建书籍愿望清单、取消借阅并更改登录详细信息。
-- 为客户提供在借阅或取消电子书时发送电子邮件的功能，并在电子书借阅即将结束时发送提醒。
-- 允许用户对他们借阅的电子书留下评论。
-- 这些要求应由您的团队细化为一组可交付成果。预计团队将交付所有基本要求。
-
-假设
-
-- 只有拥有帐户的用户才能借阅电子书。
-  - 浏览目录不需要帐户。
-- 没有罚款——借阅的电子书在超过借阅时间后将从用户当前的活跃电子书列表中删除。
-- 系统应跟踪用户借阅的所有电子书。
-- 应用程序应包括每本电子书的封面图片及其类别（如科幻、悬疑、非小说等）和简要描述。
-
-## 可能的扩展
-
-您可能想考虑一些扩展，例如：
-
-- 为用户借阅电子书提供支付机制。您可以使用虚拟支付商系统 [HorsePay](http://homepages.cs.ncl.ac.uk/daniel.nesbitt/CSC8019/HorsePay)，该系统模拟用户使用其卡支付。
-- 包括书籍类别的标签云等可视化。
-- 允许用户在社交媒体（如 Facebook）上发布他们对电子书的评论。
-- 创建管理员添加/删除/调整可借阅电子书的功能。
-
-如果您的团队有其他扩展，请在开始实施之前与 Dan 或 John 确认这些扩展是否合适。
+# E-Book Borrowing System
 
 ---
-POST 方法传入参数使用 **JSON** 格式
+
+This document is also available in [Chinese](README_CN.md).
+
+---
+
+Your team has been tasked with developing an application that allows people to borrow e-books from a centralized database. The application can be either a website or an actual mobile or desktop application.
+
+## Basic Requirements
+The implemented system should have the following features:
+
+- Functionality for users to create and manage accounts.
+- Each e-book can only be borrowed by x people for a duration of y.
+  - Your team will create virtual e-books with authors, titles, quantity x, and borrowing time y.
+- Each account can borrow up to 10 books at a time.
+- Create an account dashboard for users to create book wishlists, cancel borrowings, and change login details.
+- Provide customers with the functionality to send emails when borrowing or canceling e-books, and send reminders when e-book borrowing is about to end.
+- Allow users to leave comments on e-books they have borrowed.
+- These requirements should be refined by your team into a set of deliverables. The team is expected to deliver all basic requirements.
+
+## Assumptions
+
+- Only users with accounts can borrow e-books.
+  - Browsing the catalog does not require an account.
+- No fines - borrowed e-books will be removed from the user's current active e-book list after the borrowing time expires.
+- The system should track all e-books borrowed by users.
+- The application should include a cover image for each e-book along with its category (such as science fiction, mystery, non-fiction, etc.) and a brief description.
+
+## Possible Extensions
+
+You may want to consider some extensions, such as:
+
+- Providing a payment mechanism for users to borrow e-books. You can use the virtual payment system [HorsePay](http://homepages.cs.ncl.ac.uk/daniel.nesbitt/CSC8019/HorsePay), which simulates users paying with their cards.
+- Including visualizations such as tag clouds for book categories.
+- Allowing users to post their e-book reviews on social media (such as Facebook).
+- Creating functionality for administrators to add/delete/adjust borrowable e-books.
+
+If your team has other extensions, please confirm with Dan or John whether these extensions are appropriate before beginning implementation.
+
+---
+POST method parameters use **JSON** format
 ---
 # Authentication
 - **JWT Bearer Token** is used for authenticated endpoints.
 - Obtain a token via `/api/auth/login`.
 ---
 
-## [认证 & 用户管理](Users.md)
-## [电子书管理](eBooks.md)
-## [借阅系统](Borrow.md)
-## [愿望清单](Wishlist.md)
-## [购物车](ShoppingCart.md)
-## [评论系统](Reviews.md)
-## [支付系统](Payments.md)
+## [Authentication & User Management](Users.md)
+## [E-Book Management](eBooks.md)
+## [E-Book Categories](Categories.md)
+## [Borrowing System](Borrow.md)
+## [Wishlist](Wishlist.md)
+## [Shopping Cart](ShoppingCart.md)
+## [Review System](Reviews.md)
+## [Payment System](Payments.md)
 

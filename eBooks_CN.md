@@ -1,10 +1,11 @@
-# E-Book Management
+# 电子书管理
 
-### Get Popular Books (bookId sorted by borrowing count in descending order)
+
+### 获取书籍榜单（bookId按借阅次数降序排列）
 ```http
 GET /api/books/popular
 ```
-**Response**
+**响应**
 ```json
 {
     "state": "success",
@@ -12,11 +13,12 @@ GET /api/books/popular
 }
 ```
 
-### Get E-Book Details
+
+### 获取电子书详情
 ```http
 GET /api/books/get?bookId=book123
 ```
-**Response**
+**响应**
 ```json
 {
   "bookId": "book123",
@@ -33,18 +35,18 @@ GET /api/books/get?bookId=book123
 }
 ```
 
-### Get E-Book Content
+### 获取电子书内容
 ```http
 POST /api/books/content
 ```
 
-#### Request Headers
+#### 请求头
 
 ```http
 Authorization: Bearer <JWT_TOKEN>
 ```
 
-#### Request Body
+#### 请求体
 
 ```json
 {
@@ -52,7 +54,7 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-**Response**
+**响应**
 ```json
 {
   "bookId": "book123",
@@ -60,13 +62,13 @@ Authorization: Bearer <JWT_TOKEN>
 }
 ```
 
-### Search E-Books
+### 搜索电子书
 ```http
 GET /api/books/search?title=xxx&author=xxx&category=xxx
 ```
-At least one of `title`, `author`, or `category` must be provided.
+`title`、`author`、`category` **至少存在一个**。
 
-**Response**
+**响应**
 ```json
 {
   "state": "success",
